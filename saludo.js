@@ -9,4 +9,6 @@ las cosas de este archivo.
 "module.exports" permite exportar datos desde el módulo.
 por default es un objeto vacío, pero yo puedo asignarle propiedades.
 */
-module.exports = {saludar};
+
+const gritar = nombre => console.log(`HOLAAA ${nombre}`);
+module.exports = {saludar,gritar};
