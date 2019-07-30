@@ -1,4 +1,4 @@
-const saludito = require("./saludo.js");/*El require importa todo lo que exportaste del modulo
+const {saludar:saludito} = require("./saludo.js");/*El require importa todo lo que exportaste del modulo
 pero aun asi hay que guardarlo en algun lado.
 en este caso, guardo toda la funcion en "saludito" y uso esa funcion.*/
 

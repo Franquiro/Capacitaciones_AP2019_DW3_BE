@@ -9,4 +9,4 @@ las cosas de este archivo.
 "module.exports" permite exportar datos desde el módulo.
 por default es un objeto vacío, pero yo puedo asignarle propiedades.
 */
-module.exports = saludar;
+module.exports = {saludar};
