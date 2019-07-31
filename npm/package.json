@@ -1,0 +1,12 @@
+{
+  "name": "pruebas_npm",
+  "version": "1.0.0",
+  "description": "Aplicacion de prueba para los modulos de NPM, capacitaciones 2019 segundo cuatrimestre",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Francisco Quiroga y Medus",
+  "license": "ISC"
+}
