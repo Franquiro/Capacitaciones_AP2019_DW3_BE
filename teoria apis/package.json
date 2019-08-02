@@ -1,0 +1,12 @@
+{
+  "name": "server-web",
+  "version": "1.0.0",
+  "description": "Proyecto para crear un servidor web",
+  "main": "serverMain.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node serverMain.js"
+  },
+  "author": "Francisco Quiroga y Medus",
+  "license": "ISC"
+}
