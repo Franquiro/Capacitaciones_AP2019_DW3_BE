@@ -1,13 +1,13 @@
 console.log("wololooooo");
-const http = require('http');
-const port = 3000;
+const http = require('http'); // importa el módulo http
+const port = 3000; // defino el puerto 
 
 // creamos la funcion que maneja los pedidos
 const handle = (req, res) => {
     res.writeHead(200, {
-        'Content-Type': 'text/plain'
+        'Content-Type': 'text/javascript' // tengo que especificar el tipo de dato de la respuesta.
     });
-    res.end('Hola Mundo'); //envia el mensaje
+    res.end('<h1>Hola Mundo</h1>'); //envia el mensaje
 };
 
 // creamos el objeto servidor

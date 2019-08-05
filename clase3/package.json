@@ -1,0 +1,19 @@
+{
+  "name": "server-express",
+  "version": "1.0.0",
+  "description": "Crear un servidor de node usando express",
+  "main": "severmain.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node servermain.js"
+  },
+  "keywords": [
+    "server",
+    "express"
+  ],
+  "author": "Francisco Quiroga y Medus",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
