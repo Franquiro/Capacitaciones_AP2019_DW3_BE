@@ -1,5 +1,6 @@
 const express = require('express'); // pido el modulo express guardo un objeto gigante llamado express.
 const bodyParser = require('body-parser');
+const cors = require('cors'); // modulo para la validacion del lado del servidor. deshabilita.
 console.log("LISTENING...");
 const app = express(); //crea el servidor. todavia no hace nada.
 const actores = [{
@@ -31,6 +32,7 @@ const peliculas = [{
 //body parser. para poder leer los body de los posts
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors());
 // creo endpoints de express (rutas)
 app.get('/', (req, res) => {
     res.send('<h1>Hola Mundo</h1>');
