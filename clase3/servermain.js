@@ -63,7 +63,7 @@ app.get('/actores/:id', (req, res) => {
 });
 
 app.post('/actores', (req, res) => {
-    console.log(req.body);
+    console.log(req);
     const id = idMayor() + 1;
     const actor = req.body;
     actor.id = id;
@@ -76,6 +76,41 @@ function idMayor() {
     actores.forEach(a => { a.id > mayor ? mayor = a.id : '' });
     return mayor;
 }
+
+app.delete('/actores/:id', (req, res) => {
+    const id_eliminar = req.params.id;
+    // for(let i=0; i<actores.length ; i++){
+    //     if(actores[i].id == id_eliminar){
+    //         actores.splice(i,1);
+    //         return res.send('Eliminado...');
+    //     }
+    // }
+    const indice = actores.findIndex(a => a.id == id_eliminar);
+    if (indice >= 0) {
+        actores.splice(indice, 1);
+        return res.send('Eliminado...');
+    }
+    else return res.status(418).send('<img src="https://evert.meulie.net/wp-content/uploads/2016/03/Teapot.png"/>Nope... no existe...');
+});
+
+app.put('/actores/:id', (req, res) => {
+    // voy a editar un elemento, primero necesito saber que elemento.
+    const id_modificar = req.params.id;
+    // necesito saber que ponerle
+    const actor = req.body;
+    console.log(actor);
+    const index = actores.findIndex(a => a.id == id_modificar);
+    if (index >= 0) {
+        const nuevoActor = {
+            ...actores[index],
+            ...actor
+        }
+        actores[index] = nuevoActor;
+        return res.json(actores);
+    }
+
+    else return res.status(404).send('NO PODES');
+});
 // metodos de http para hacer pedidos
 
 // get -> busca algo
