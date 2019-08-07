@@ -32,7 +32,7 @@ const peliculas = [{
 //body parser. para poder leer los body de los posts
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors()); // a cors() le puedo pasar los dominios conocidos y permitidos.
 // creo endpoints de express (rutas)
 app.get('/', (req, res) => {
     res.send('<h1>Hola Mundo</h1>');
